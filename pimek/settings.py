@@ -19,8 +19,8 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
-LOGIN_REDIRECT_URL = '/reviews/'
-LOGOUT_REDIRECT_URL = '/reviews/'
+LOGIN_URL = 'cpanel/signin'
+LOGOUT_REDIRECT_URL = '/cpanel/signin'
 
 
 # Quick-start development settings - unsuitable for production
@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'store',
+    'cpanel'
 ]
 
 STATICFILES_DIRS = [
@@ -130,3 +132,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_ROOT = MEDIA_DIR
+MEDIA_URL = '/media/'

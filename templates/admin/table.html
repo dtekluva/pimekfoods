@@ -1,0 +1,281 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Material Dashboard by Creative Tim</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Bootstrap core CSS     -->
+    <link href="{% static "assets/css/bootstrap.min.css" %}" rel="stylesheet" />
+    <!--  Material Dashboard CSS    -->
+    <link href="{% static "assets/css/material-dashboard.css" %}" rel="stylesheet" />
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="{% static "assets/css/demo.css" %}" rel="stylesheet" />
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar" data-color="purple" data-image="{% static "assets/img/sidebar-1.jpg" %}">
+            <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+            <div class="logo">
+                <a href="http://www.creative-tim.com" class="simple-text">
+                    Moremi
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li>
+                        <a href="{{webadrress}}/cpanel">
+                            <i class="material-icons">dashboard</i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{webadrress}}/cpanel/settings">
+                            <i class="material-icons">settings</i>
+                            <p>Settings</p>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="{{webadrress}}/cpanel/tables">
+                            <i class="material-icons">content_paste</i>
+                            <p>Table List</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{webadrress}}/cpanel/notifications">
+                            <i class="material-icons text-gray">notifications</i>
+                            <p>Notifications</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{webadrress}}/cpanel/logout">
+                            <i class="material-icons text-gray">warning</i>
+                            <p>Logout</p>
+                        </a>
+                    </li>
+                    <li class="active-pro">
+                        <a href="">
+                            <i class="material-icons">unarchive</i>
+                            <p>Moremi Utensils</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <nav class="navbar navbar-transparent navbar-absolute">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"> Table List </a>
+                    </div>
+                    <div class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="material-icons">dashboard</i>
+                                    <p class="hidden-lg hidden-md">Dashboard</p>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="material-icons">notifications</i>
+                                    <span class="notification"></span>
+                                    <p class="hidden-lg hidden-md">Notifications</p>
+                                </a>
+                                <!-- <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">Mike John responded to your email</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">You have 5 new tasks</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">You're now friend with Andrew</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Another Notification</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Another One</a>
+                                    </li>
+                                </ul> -->
+                            </li>
+                            <!-- <li class="active">
+                                    <a href="#pablo" class="btn btn-primary btn-round">Add Product</a>
+                            </li> -->
+                        </ul>
+                        <!-- <form class="navbar-form navbar-right" role="search">
+                            <div class="form-group  is-empty">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <span class="material-input"></span>
+                            </div>
+                            <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                <i class="material-icons">search</i>
+                                <div class="ripple-container"></div>
+                            </button>
+                        </form> -->
+                    </div>
+                </div>
+            </nav>
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                            <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="card">
+                                                <div class="card-header" data-background-color="purple">
+                                                    <h4 class="title">NEW PRODUCT</h4>
+                                                    <p class="category">Add a new product</p>
+                                                </div>
+                                                <div class="card-content">
+                                                        
+                                                    <form name="sub" class=" sub" name="contactForm" id="contactForm" method="post" action="http://127.0.0.1:8000/cpanel/add_product" enctype="multipart/form-data">
+                                                          {% csrf_token %}
+                                                        <div class="row">
+                                                            <div class="col-md-4">
+                                                                    <div class=" fileinput fileinput-new" data-provides="fileinput">
+                                                                            <span class="btn btn-primary btn-file"><span>Choose file</span><input id="id_image" name="image" class="pic" type="file" /></span>
+                                                                            <span class="fileinput-filename"></span><span class="fileinput-new"></span>
+                                                                        </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group label-floating">
+                                                                    <label class="control-label">Product name</label>
+                                                                    <input maxlength="15" required id="id_name" name="name" type="text" class="name form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group label-floating">
+                                                                    <label class="control-label">Price</label>
+                                                                    <input type="number" name="price" value="0" id="id_price" class="price form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary pull-right">Add product</button>
+                                                        <div class="clearfix"></div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                        <div class="card">
+                                            <div class="card-header" data-background-color="orange">
+                                                <h4 class="title">All Uploads</h4>
+                                                <p class="category">New Products just added</p>
+                                            </div>
+                                            <div class="card-content table-responsive">
+                                                <table class="table table-hover">
+                                                    <thead class="text-warning">
+                                                        <th>ID</th>
+                                                        <th>Name</th>
+                                                        <th>Price</th>
+                                                        <th>Added</th>
+                                                        <th>Action</th>
+                                                    </thead>
+                                                    <tbody>
+                                                        {% for product in products %}
+                                                        <tr>
+                                                            <td>{{product.id}}</td>
+                                                            <td>{{product.name}}</td>
+                                                            <td>{{product.price}}</td>
+                                                            <td>{{product.date}}</td>
+                                                            <td><a href="{{webadrress}}/cpanel/product/{{product.id}}/" class="btn btn-primary btn-round">edit</a></td>
+                                                        </tr>
+                                                        {% endfor %}
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                        <div class="col-md-12">
+                            <div class="card card-plain">
+                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav class="pull-left">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Company
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Portfolio
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Blog
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <p class="copyright pull-right">
+                        &copy;
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>
+                        <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+<!--   Core JS Files   -->
+<!-- <script src="{% static "assets/js/jquery-2.1.3.min.js" %}" type="text/javascript"></script> -->
+<script src="{% static "assets/js/jquery-3.2.1.min.js" %}" type="text/javascript"></script>
+<script src="{% static "assets/js/main.js" %}" type="text/javascript"></script>
+<script src="{% static "assets/js/bootstrap.min.js" %}" type="text/javascript"></script>
+<script src="{% static "assets/js/material.min.js" %}" type="text/javascript"></script>
+<script src="{% static "assets/js/material-dashboard.js" %}" type="text/javascript"></script>
+<!--  Charts Plugin -->
+<script src="{% static "assets/js/chartist.min.js" %}"></script>
+
+<!--  Dynamic Elements plugin -->
+<script src="{% static "assets/js/arrive.min.js" %}"></script>
+<!--  PerfectScrollbar Library -->
+<script src="{% static "assets/js/perfect-scrollbar.jquery.min.js" %}"></script>
+<!--  Notifications Plugin    -->
+<script src="{% static "assets/js/bootstrap-notify.js" %}"></script>
+<!--  Google Maps Plugin    -->
+<!-- Material Dashboard javascript methods -->
+<script src="{% static "assets/js/material-dashboard.js" %}"></script>
+<!-- Material Dashboard DEMO methods, don't include it in your project! -->
+<script src="{% static "assets/js/demo.js" %}"></script>
+
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static "store/assets/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "store/assets/css/font-awesome.min.css" %}">
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static "store/assets/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "store/assets/css/main.css" %}">
+    <link rel="stylesheet" href="{% static "store/assets/css/style.css" %}">
+    <link rel="stylesheet" href="{% static "store/assets/css/catalog-style.css" %}">
+    <link rel="stylesheet" href="{% static "store/assets/css/responsive.css" %}">
+    <title>MOREMI</title>
+</head>
+<body >
+    <div class="catalog-container">
+
+        <header>
+                <!-- PRE LOADER -->
+                <div class="preloader">
+                    <div class="sk-spinner sk-spinner-wordpress">
+                        <span class="sk-inner-circle"></span>
+                    </div>
+                </div>
+                <!-- PRE LOADER -->
+                
+                <!-- link-list -->
+                <div class="header_left">
+
+            
+                    <div class="entry_container">
+            
+                        <div class="nav-bar">
+                            <div class="logo logo_top" >
+                                <h3> <span>Moremi</span> <span class="logo_colored" >Utensils</span> </h3>
+                            </div>
+                
+                            <div class="link_list">
+                                <h5 class="link"><a href="/">Home</a> </h5>
+                                <h5 class="link"><a href="#">Catalog</a> </h5>
+                                <h5 class="link"><a href="#contact">About</a> </h5 >
+                                <h5 class="link"><a href="#contact">Contact</a ></h5 >
+                            </div>
+                        </div>
+                        
+                        <div class="top_bar">
+                            <div class="catalog_yellow_bar">
+                                <div class="top">
+                                    <div>
+                                        FIND YOUR COMFORT
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                        <div class="buy_our_products"><span>Mobile Contact</span> </div>
+                                    
+                                        <div class="whatsapp">
+                                            <div class="whatsapp_img"></div>
+                                            <div class="whatsapp_number">08093889730</div>
+                                        </div>
+                                        <div class="phone">
+                                            <div class="phone_img"></div>
+                                            <div class="call_number">07018451668</div>
+                                        </div>
+                                        
+                                        <div class="buy_our_products address_title" ><span>Address</span> </div>
+                                    <div class="location">
+                                        <span style="color: #4f2c59;" class="glyphicon glyphicon glyphicon-map-marker" style="color:black;" aria-hidden="true"></span>
+                                        <span style="color: #4f2c59";> OPIC B/stop, On Channels Television Road beside Riverside School </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="top_image_cont">
+                            
+                                <div class="top_image">
+                                    <div class="image">
+                                        
+                                    </div>
+                                    <div>
+                                        <span class="product_name">Electric cupcake maker </span><span class="upmost_price">   ₦500</span>
+                                    </div>
+                                </div> 
+                                <div class="small_image">
+                                    <div class="small_image_left">
+                                        <div class="image">
+                                                <img src="{{products.3.image.url}}" alt="">
+                                        </div>
+                                        <div>
+                                            <span class="product_name">{{products.3.name}}  </span><span class="price"> ₦{{products.3.price}}</span>
+                                        </div>  
+                                    </div>
+                                    <div class="small_image_right">
+                                        <div class="image">
+                                            <img src="{{products.4.image.url}}" alt="">
+                                        </div>
+                                        <div>
+                                            <span class="product_name">{{products.4.name}} </span><span class="price">   ₦ {{products.4.price}}</span>
+                                        </div>  
+                                    </div>
+                                </div>
+                                  
+                            </div>
+                            
+                        </div>
+                    </div>
+            
+                </div>
+                <!-- link-list -->
+            
+                
+                
+        </header>
+       
+                
+        <main>
+            
+            <div class="small_image image_target">
+                <div class="main_small_image_left target">
+                   
+            
+        </main> 
+        <div class="pagination_cont">
+            <ul class="pagination pagination-lg">
+                
+            </ul>
+        </div>
+        
+
+    </div>
+    
+    <footer>
+        <div class="footer_nav">
+            <div class="logo bottom_logo">
+                    <h3> <span>Moremi</span> <span class="logo_colored" >Utensils</span> </h3>
+            </div>
+    
+           <div class="link_list" id="bottom_link">
+                <h5 class="link"><a href="/">Home</a> </h5>
+                <h5 class="link"><a href="#">Catalog</a> </h5>
+                <h5 class="link"><a href="#contact">About</a> </h5 >
+                <h5 class="link"><a href="#contact">Contact</a ></h5 >
+            </div>
+             <div class="social">
+                <h5 class="facebook"></h5>
+                <h5 class="twitter"></h5>
+                <h5 class="instagram"></h5 >
+            </div>
+        </div> 
+        <div class="author">
+            &copy; 2017 Oyegoke Tomisin All Rights Reserved
+        </div>      
+    </footer>
+    
+
+
+    <script src="{% static "store/assets/js/image_populate.js" %}"></script>
+    <script src="{% static "store/assets/js/image_list.js" %}"></script>
+    <script src="{% static "store/assets/js/jquery.js" %}"></script>
+    <script src="{% static "store/assets/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "store/assets/js/smoothscroll.js" %}"></script>
+    <script src="{% static "store/assets/js/custom.js" %}"></script>
+    <script src="{% static "store/assets/js/sendmail.js" %}"></script>
+</body>
+
+</html>

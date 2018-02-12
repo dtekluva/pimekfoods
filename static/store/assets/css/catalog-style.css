@@ -1,0 +1,148 @@
+*{
+    font-family: roboto; 
+}
+.catalog-container{
+    width: 1280px;
+    margin: auto;
+    padding: 0 50px;
+}
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0px;
+}
+
+.top_bar{
+    display: flex;
+    margin-top: 120px;
+}
+.catalog_yellow_bar{
+    width: 362px;
+    background-color: #fbda52;
+    height: 876px;
+}
+
+.catalog_yellow_bar .bottom{
+    padding: 0 60px;
+}
+.phone_img, .whatsapp_img {
+    flex: none;  
+    margin-bottom:21px
+}
+.location span{
+    text-align: left;
+}
+.location{
+    display: flex;
+    color: #4f2c59;
+}
+.location .glyphicon{
+    padding-top:5px;
+    
+}
+.buy_our_products{
+    margin-top: 111px;
+    margin-bottom:31px;
+    text-align: left; 
+}
+.address_title{
+    margin-top: 50px !important;
+    text-align: left;
+}
+.whatsapp_number, .call_number{
+    font-family: roboto;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: #4f2c59;
+}
+
+.top div{
+    font-family: roboto;
+    font-size: 64px;
+    font-weight: bold;
+    font-style: italic;
+    color: #4f2c59;
+    padding: 53px 4px 0px 12px;
+}
+.price {
+    font-size: 24px;
+    font-weight: 900 !important;
+    font-size: 24px;
+    font-weight: 900;
+    margin-left: 25%;
+}
+.upmost_price{
+    font-size: 24px;
+    font-weight: 900;
+    font-size: 24px;
+    font-weight: 900;
+    margin-left: 20%;
+}
+.top_image .image{
+    width: 571px;
+    height: 378px;
+    background-image: url("../images/kitchen.jpg");
+    margin: auto;
+    margin-bottom: 20px;    
+}
+.top_image .image img{
+    width: 571px;
+    height: 378px;   
+}
+.top_image div{
+    text-align: center;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 400;
+}
+.top_image_cont{
+    height: 410px;
+    width: 69%;    
+}
+
+.top_image{
+    flex: 3;
+}
+.catalog_yellow_bar .top{
+    background-color: rgb(255, 255, 255);
+    height: 254px;
+    width:100%;
+}
+.small_image{
+    display: flex;
+    flex-wrap:wrap;
+    margin-top: 70px;
+    
+}
+.small_image .image{
+    width: 360px;
+    height: 348px;
+    background-image: url("../images/kitchen.jpg");
+    margin: auto;
+    margin-bottom: 20px;
+}
+.small_image .image img{
+    width: 360px;
+    height: 348px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.small_image_left{
+    margin: 0 32px;
+}
+.main_small_image_mid{
+    margin: 35px 32px;
+    text-align: left;
+}
+.main_small_image_left, .main_small_image_right{
+    margin: 35px 0 35px 0;
+    text-align: left;
+}
+.main_small_image_left div, .main_small_image_right div{
+    text-align: left;
+}
+.small_image .product_name, .main_small_image_left div .product_name, .main_small_image_mid div .product_name, .main_small_image_right div .product_name{
+    font-size: 18px;
+    font-weight: 400;
+}
