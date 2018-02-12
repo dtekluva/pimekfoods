@@ -144,7 +144,7 @@
                                         <div class="col-md-12">
                                             <div class="card">
                                                 <div class="card-header" data-background-color="purple">
-                                                    <h4 class="title">{{products.name}}</h4>
+                                                    <h4 class="title">{{products.name|upper}}</h4>
                                                     <p class="category">Make changes to product</p>
                                                 </div>
                                                 <div class="card-content">
@@ -209,7 +209,7 @@
                                                     <tbody>
                                                         <tr>
                                                             <td>{{products.id}}</td>
-                                                            <td>{{products.name}}</td>
+                                                            <td>{{products.name|upper}}</td>
                                                             <td>{{products.price}}</td>
                                                             <td>{{products.added}}</td>
                                                         </tr>

@@ -198,7 +198,7 @@
                                                         {% for product in products %}
                                                         <tr>
                                                             <td>{{product.id}}</td>
-                                                            <td>{{product.name}}</td>
+                                                            <td>{{product.name|upper}}</td>
                                                             <td>{{product.price}}</td>
                                                             <td>{{product.date}}</td>
                                                             <td><a href="{{webadrress}}/cpanel/product/{{product.id}}/" class="btn btn-primary btn-round">edit</a></td>

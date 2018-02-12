@@ -8,7 +8,7 @@ var index_target = document.getElementsByClassName('thumbnail');//index page pop
 var new_array = [];
 random_index = Math.floor(Math.random() * 10 + 1); //add a random image to top
 var index = 1;
-var num_imgs = 15
+var num_imgs = 21
 
 
 function index_populator(){
@@ -17,7 +17,7 @@ function index_populator(){
 
   while (index < 4) {
 
-      index_target[0].innerHTML += '<div class="target"><div class="image"><img src="' + image_array[random_index + index ].image + '" alt=""></div><div><span>' + image_array[random_index + index ].name + '</span><span class="price">' +  image_array[random_index + index ].price + '</span></div></div>' ;
+      index_target[0].innerHTML += '<div class="target"><div class="image"><img src="' + image_array[random_index + index ].image + '" alt=""></div><div><span>' + (image_array[random_index + index ].name).toUpperCase() + '</span><span class="price">₦' +  image_array[random_index + index ].price + '</span></div></div>' ;
       //console.log("working");
       
       index += 1;
@@ -29,7 +29,7 @@ function index_populator(){
 Populate top bar
 -------------------------------------------------------------------------------*/
 function add_top_image() {
-  top_image_entry[0].innerHTML = '<div class="image"><img src="' + image_array[random_index].image + '" alt=""></div><div><span class="product_name">' + image_array[random_index].name + '</span><span class="upmost_price">' + image_array[random_index].price + '</span></div>';
+  top_image_entry[0].innerHTML = '<div class="image"><img src="' + image_array[random_index].image + '" alt=""></div><div><span class="product_name">' + (image_array[random_index].name).toUpperCase() + '</span><span class="upmost_price">₦' + image_array[random_index].price + '</span></div>';
   add_lower_images(image_array.slice((0),(num_imgs)));
 };
 add_top_image()
@@ -47,7 +47,7 @@ function add_lower_images(new_imgs) {
     }
     if (index % 3 === 0 && index > 2) {
 
-      image_entries[0].innerHTML += ' <div class="main_small_image_left target"><div class="image"><img src="' + new_array[0].image + '" alt=""></div><div><span class="product_name">' + new_array[0].name + '</span><span class="upmost_price">' + new_array[0].price + '</span></div></div> <div class="main_small_image_mid target"><div class="image"><img src="' + new_array[1].image + '" alt=""></div><div><span class="product_name">' + new_array[1].name + '</span><span class="upmost_price">' + new_array[1].price + '</span></div></div> <div class="main_small_image_right  target"> <div class="image"><img src="' + new_array[2].image + '" alt=""></div><div><span class="product_name">' + new_array[2].name + '</span><span class="upmost_price">' + new_array[2].price + '</span></div></div>';
+      image_entries[0].innerHTML += ' <div class="main_small_image_left target"><div class="image"><img src="' + new_array[0].image + '" alt=""></div><div><span class="product_name">' + (new_array[0].name).toUpperCase() + '</span><span class="upmost_price">₦' + new_array[0].price + '</span></div></div> <div class="main_small_image_mid target"><div class="image"><img src="' + new_array[1].image + '" alt=""></div><div><span class="product_name">' + (new_array[1].name).toUpperCase() + '</span><span class="upmost_price">₦' + new_array[1].price + '</span></div></div> <div class="main_small_image_right  target"> <div class="image"><img src="' + new_array[2].image + '" alt=""></div><div><span class="product_name">' + (new_array[2].name).toUpperCase() + '</span><span class="upmost_price">₦' + new_array[2].price + '</span></div></div>';
 
       new_array = [];
     };
@@ -58,9 +58,9 @@ function add_lower_images(new_imgs) {
     //---------------------------------------------------------------------------------------------
 
     if (new_array.length == 2 && index > image_array.length - 2) {
-      image_entries[0].innerHTML += ' <div class="main_small_image_left target"><div class="image"><img src="' + new_array[0].image + '" alt=""></div><div><span class="product_name">' + new_array[0].name + '</span><span class="upmost_price">' + new_array[0].price + '</span></div></div> <div class="main_small_image_mid target"><div class="image"><img src="' + new_array[1].image + '" alt=""></div><div><span class="product_name">' + new_array[1].name + '</span><span class="upmost_price">' + new_array[1].price + '</span></div></div>';
+      image_entries[0].innerHTML += ' <div class="main_small_image_left target"><div class="image"><img src="' + new_array[0].image + '" alt=""></div><div><span class="product_name">' + (new_array[0].name).toUpperCase() + '</span><span class="upmost_price">₦' + new_array[0].price + '</span></div></div> <div class="main_small_image_mid target"><div class="image"><img src="' + new_array[1].image + '" alt=""></div><div><span class="product_name">' + (new_array[1].name).toUpperCase() + '</span><span class="upmost_price">₦' + new_array[1].price + '</span></div></div>';
     } else if (new_array.length == 1 && index > image_array.length - 1) {
-      image_entries[0].innerHTML += ' <div class="main_small_image_left target"><div class="image"><img src="' + new_array[0].image + '" alt=""></div><div><span class="product_name">' + new_array[0].name + '</span><span class="upmost_price">' + new_array[0].price + '</span></div></div>';
+      image_entries[0].innerHTML += ' <div class="main_small_image_left target"><div class="image"><img src="' + new_array[0].image + '" alt=""></div><div><span class="product_name">' + (new_array[0].name).toUpperCase() + '</span><span class="upmost_price">₦' + new_array[0].price + '</span></div></div>';
     }
   });
 };

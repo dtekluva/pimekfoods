@@ -137,7 +137,7 @@
                                     <div class="alert alert-info alert-with-icon" data-notify="container">
                                         <button type="button" aria-hidden="true" class="close">×</button>
                                         <i data-notify="icon" class="material-icons">message</i>
-                                        <span data-notify="message"><h5>From - {{message.name}}</h5> <h4>Phone - {{message.phone}}</h4>{{message.message}}</span>
+                                        <span data-notify="message"><h5>From - {{message.name|upper}}</h5> <h4>Phone - {{message.phone}}</h4>{{message.message}}</span>
                                     </div>
                                 </div>
                                {% endfor %}
